@@ -610,4 +610,10 @@ nav a {
 }
 .animates li:hover:after {
   width: 100%;
+}
+
+@media (max-width: 767px) {
+  .animates li::after {
+    height: 0px;
+  }
 }/*# sourceMappingURL=index.css.map */

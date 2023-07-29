@@ -588,3 +588,10 @@ nav {
         }
     }
 }
+@media (max-width: 767px) {
+    .animates {
+        li::after {
+            height: 0px;
+        }
+    }
+}
