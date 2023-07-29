@@ -1,0 +1,590 @@
+@import "reset.scss";
+// variable
+$color_pink: #fbf2f2;
+$color_red: #aa0601;
+$color_white: #ffffff;
+$color_black: #000000;
+$color_brown: #650300;
+
+// utilities
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    text-decoration: none;
+}
+body {
+    font-family: "Bruno Ace SC", "Noto Sans TC", "sans-serif";
+    line-height: 1.5;
+}
+ol,
+ul {
+    list-style: none;
+}
+img {
+    // vertical-align: middle;
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+h1 {
+    font-size: 64px;
+}
+h2 {
+    font-size: 64px;
+    width: 636px;
+    font-weight: 400;
+}
+h3 {
+    font-size: 48px;
+    text-align: center;
+    color: $color_brown;
+    font-weight: bold;
+    @media (max-width: 767px) {
+        font-size: 24px;
+    }
+}
+
+h4 {
+    font-size: 24px;
+    text-align: center;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1296px;
+}
+// display : flex
+.d-flex {
+    display: flex;
+}
+.fd-col {
+    flex-direction: column;
+}
+.jc {
+    &-sb {
+        justify-content: space-between;
+    }
+    &-c {
+        justify-content: center;
+    }
+}
+.ai-c {
+    align-items: center;
+}
+.ai-s {
+    align-items: start;
+}
+
+.fs {
+    &-16 {
+        font-size: 16px;
+    }
+    &-20 {
+        font-size: 20px;
+    }
+    &-24 {
+        font-size: 24px;
+    }
+    &-36 {
+        font-size: 36px;
+    }
+    &-48 {
+        font-size: 48px;
+    }
+}
+
+.m {
+    &t-24 {
+        margin-top: 24px;
+    }
+    &t-48 {
+        margin-top: 48px;
+    }
+    &b-8 {
+        margin-bottom: 8px;
+    }
+    &b-16 {
+        margin-bottom: 16px;
+    }
+    &b-24 {
+        margin-bottom: 24px;
+    }
+    &b-36 {
+        margin-bottom: 36px;
+    }
+    &b-48 {
+        margin-bottom: 48px;
+    }
+}
+
+// coding start
+
+// wrap
+.wrap {
+    background: $color_pink;
+}
+nav {
+    background-color: $color_red;
+    padding: 16px 0;
+    img {
+        height: 48px;
+    }
+    ul {
+        gap: 60px;
+        font-size: 20px;
+    }
+    a {
+        color: $color_white;
+        display: block;
+    }
+}
+@media (max-width: 992px) {
+    nav {
+        padding: 12px 36px;
+    }
+}
+@media (max-width: 767px) {
+    nav {
+        padding: 0;
+        .container {
+            display: block;
+            div {
+                padding: 12px 15px;
+            }
+        }
+        ul {
+            gap: 0;
+            flex-wrap: wrap;
+            font-size: 16px;
+        }
+        li {
+            width: 50%;
+            border: 1px solid white;
+            text-align: center;
+        }
+        a {
+            padding: 12px 0;
+        }
+    }
+}
+
+// banner
+.banner {
+    // max-width: 100%;
+    height: 780px;
+    background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/home-header.png?raw=true);
+    background-size: cover;
+    background-position: center;
+    color: $color_brown;
+    .container {
+        margin-left: auto;
+    }
+    p {
+        width: 502px;
+        margin-left: auto;
+        font-family: "Noto Sans TC";
+        padding-top: 296px;
+        font-size: 36px;
+    }
+    h1 {
+        width: 576px;
+        margin-left: auto;
+        font-family: "Noto Sans TC";
+        font-weight: bold;
+    }
+    button {
+        margin-left: auto;
+        font-family: "Noto Sans TC", sans-serif;
+        background-color: $color_red;
+        color: $color_white;
+        width: 104px;
+        padding: 6px 12px;
+        border: none;
+    }
+    .ta-r {
+        text-align: right;
+    }
+}
+@media (max-width: 992px) {
+    .banner {
+        background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/home-header-sm.png?raw=true);
+        .container {
+            padding-right: 36px;
+        }
+    }
+}
+@media (max-width: 767px) {
+    .banner {
+        text-align: right;
+        p {
+            width: 347px;
+            font-size: 16px;
+        }
+        h1 {
+            width: 347px;
+            font-size: 24px;
+        }
+    }
+}
+
+// feature
+.feature {
+    padding: 80px 0;
+    ul {
+        flex-wrap: wrap;
+        gap: 24px;
+    }
+    li {
+        width: calc((100% - 24 * 3px) / 4);
+        h3 {
+            color: $color_red;
+        }
+        img {
+            margin: 0 auto;
+        }
+    }
+}
+@media (max-width: 992px) {
+    .feature {
+        ul {
+            margin-top: 32px;
+            padding: 0 36px;
+        }
+        li {
+            width: calc((100% - 24px) / 2);
+        }
+    }
+}
+@media (max-width: 767px) {
+    .feature {
+        padding: 40px 0;
+        ul {
+            margin-top: 32px;
+            padding: 0 14px;
+        }
+        li {
+            padding: 0;
+            width: 100%;
+        }
+    }
+}
+
+// design-feat
+.design-feat {
+    background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/index-bg.png?raw=true);
+    height: 608px;
+    background-size: cover;
+    background-position: center;
+    padding: 80px 0;
+    h3 {
+        color: $color_white;
+    }
+    p {
+        background-color: $color_white;
+        text-align: center;
+        color: $color_red;
+        font-family: "roboto";
+        font-weight: bold;
+    }
+}
+@media (max-width: 992px) {
+    .design-feat {
+        background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/index-bg-md.png?raw=true);
+        height: 960px;
+        .container {
+            flex-direction: column;
+            align-items: center;
+            div {
+                margin-bottom: 24px;
+            }
+        }
+        img {
+            width: 696px;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .design-feat {
+        background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/index-bg-sm.png?raw=true);
+        height: 820px;
+        padding-top: 40px;
+        .container {
+            margin-top: 24px;
+        }
+        .photo-1 {
+            content: url(https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/home-section4-1-sm.png?raw=true);
+            width: 348px;
+        }
+        .photo-2 {
+            content: url(https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/home-section4-2-sm.png?raw=true);
+            width: 348px;
+        }
+    }
+}
+
+// classic-glasses
+.classic-glasses {
+    background-color: $color_white;
+    padding: 80px 0;
+    ul {
+        flex-wrap: wrap;
+        gap: 24px;
+    }
+    li {
+        width: calc((100% - 24 * 3px) / 3);
+        p {
+            color: $color_red;
+            text-align: center;
+            font-size: 48px;
+            margin-top: 8px;
+            font-family: "black italic";
+            font-weight: bold;
+            @media (min-width: 993px) and (max-width: 1060px) {
+                font-size: 44px;
+            }
+        }
+    }
+}
+@media (max-width: 992px) {
+    .classic-glasses {
+        ul {
+            flex-direction: column;
+            align-items: center;
+            margin-top: 48px;
+        }
+        li {
+            width: 100%;
+            img {
+                width: 346px;
+                margin: 0 auto;
+            }
+        }
+    }
+}
+@media (max-width: 767px) {
+    .classic-glasses {
+        padding: 40px 0;
+        ul {
+            margin-top: 24px;
+        }
+    }
+}
+
+// cards
+.cards {
+    background-color: $color_white;
+    padding: 80px 0;
+    ul {
+        gap: 24px;
+        flex-wrap: wrap;
+    }
+    li {
+        // width: 304px;
+        width: calc((100% - 24 * 3px) / 4);
+    }
+    .feedback {
+        padding: 16px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 207px;
+        border: #dee2e6 1px solid;
+        box-shadow: 0 2px 6px #00000029;
+    }
+}
+@media (max-width: 992px) {
+    .cards {
+        ul {
+            padding: 0 36px;
+        }
+        li {
+            width: calc((100% - 24px) / 2);
+        }
+    }
+}
+@media (max-width: 767px) {
+    .cards {
+        padding: 40px 0;
+        h3 {
+            margin-bottom: 24px;
+        }
+        ul {
+            padding: 0 14px;
+            // gap: 16px;
+        }
+        li {
+            width: 348px;
+        }
+    }
+}
+
+.contact {
+    padding: 80px 0;
+    p {
+        margin: 0 auto;
+        // text-align: center;
+        max-width: 636px;
+        margin-bottom: 24px;
+    }
+    form {
+        width: 636px;
+        margin: 0 auto;
+    }
+    label {
+        display: block;
+    }
+    input {
+        width: 100%;
+        padding: 6px 12px;
+        border: 1px solid #000000;
+    }
+    textarea {
+        resize: none;
+        height: 136px;
+        width: 100%;
+    }
+    .form-checkbox {
+        margin-right: 10px;
+        width: 20px;
+        height: 20px;
+        background: $color_black;
+        accent-color: $color_brown;
+    }
+    .btn {
+        width: 416px;
+        height: 56px;
+        padding: 16px 0;
+        margin: 0 auto;
+        background-color: $color_red;
+        color: $color_white;
+        border: none;
+        font-weight: bold;
+    }
+    .btn:hover {
+        background-color: #650300;
+    }
+}
+@media (max-width: 767px) {
+    .contact {
+        .container {
+            max-width: 348px;
+        }
+        p {
+            max-width: 348px;
+            font-size: 16px;
+        }
+        input {
+            max-width: 348px;
+        }
+        form,
+        .btn {
+            width: 348px;
+        }
+        label {
+            max-width: 348px;
+        }
+    }
+}
+
+// footer
+.footer {
+    background-color: $color_red;
+    color: $color_white;
+    padding: 48px 0 32px 0;
+    .web-map {
+        gap: 48px;
+    }
+    .social-media {
+        gap: 32px;
+        img {
+            width: 48px;
+            height: 48px;
+        }
+    }
+    span {
+        font-size: 36px;
+        margin-right: 22px;
+        transform: translate(0px, 6px);
+    }
+    a {
+        color: $color_white;
+        font-family: "Noto Sans TC";
+        font-size: 36px;
+    }
+    P {
+        font-family: "roboto";
+    }
+    hr {
+        margin: 32px 0;
+    }
+    .ul-3 {
+        gap: 48px;
+    }
+}
+@media (max-width: 992px) {
+    .footer {
+        padding: 48px 36px 40px 36px;
+    }
+}
+@media (max-width: 767px) {
+    .footer {
+        padding: 24px;
+        .web-map {
+            display: none;
+        }
+        .social-media {
+            transform: translateY(12px);
+            img {
+                width: 24px;
+                height: 24px;
+            }
+        }
+        .ul-1 {
+            justify-content: end;
+            height: 0;
+            margin-bottom: 0;
+        }
+        .contact-method {
+            a,
+            span {
+                font-size: 16px;
+            }
+        }
+        hr {
+            margin: 24px 0 16px 0;
+        }
+        .copyright {
+            flex-direction: column;
+            justify-content: start;
+            p {
+                padding: 8px 0;
+            }
+        }
+        .ul-3 {
+            flex-direction: column;
+            justify-content: start;
+            gap: 8px;
+        }
+    }
+}
+
+.animates {
+    li {
+        position: relative;
+        &::after {
+            content: "";
+            background: $color_brown;
+            width: 0%;
+            height: 3px;
+            left: 0;
+            bottom: -10px;
+            position: absolute;
+            transition: 0.5s;
+        }
+        &:hover:after {
+            width: 100%;
+        }
+    }
+}

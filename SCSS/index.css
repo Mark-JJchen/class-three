@@ -1,0 +1,613 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Bruno Ace SC", "Noto Sans TC", "sans-serif";
+  line-height: 1.5;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+h1 {
+  font-size: 64px;
+}
+
+h2 {
+  font-size: 64px;
+  width: 636px;
+  font-weight: 400;
+}
+
+h3 {
+  font-size: 48px;
+  text-align: center;
+  color: #650300;
+  font-weight: bold;
+}
+@media (max-width: 767px) {
+  h3 {
+    font-size: 24px;
+  }
+}
+
+h4 {
+  font-size: 24px;
+  text-align: center;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1296px;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.fd-col {
+  flex-direction: column;
+}
+
+.jc-sb {
+  justify-content: space-between;
+}
+.jc-c {
+  justify-content: center;
+}
+
+.ai-c {
+  align-items: center;
+}
+
+.ai-s {
+  align-items: start;
+}
+
+.fs-16 {
+  font-size: 16px;
+}
+.fs-20 {
+  font-size: 20px;
+}
+.fs-24 {
+  font-size: 24px;
+}
+.fs-36 {
+  font-size: 36px;
+}
+.fs-48 {
+  font-size: 48px;
+}
+
+.mt-24 {
+  margin-top: 24px;
+}
+.mt-48 {
+  margin-top: 48px;
+}
+.mb-8 {
+  margin-bottom: 8px;
+}
+.mb-16 {
+  margin-bottom: 16px;
+}
+.mb-24 {
+  margin-bottom: 24px;
+}
+.mb-36 {
+  margin-bottom: 36px;
+}
+.mb-48 {
+  margin-bottom: 48px;
+}
+
+.wrap {
+  background: #fbf2f2;
+}
+
+nav {
+  background-color: #aa0601;
+  padding: 16px 0;
+}
+nav img {
+  height: 48px;
+}
+nav ul {
+  gap: 60px;
+  font-size: 20px;
+}
+nav a {
+  color: #ffffff;
+  display: block;
+}
+
+@media (max-width: 992px) {
+  nav {
+    padding: 12px 36px;
+  }
+}
+@media (max-width: 767px) {
+  nav {
+    padding: 0;
+  }
+  nav .container {
+    display: block;
+  }
+  nav .container div {
+    padding: 12px 15px;
+  }
+  nav ul {
+    gap: 0;
+    flex-wrap: wrap;
+    font-size: 16px;
+  }
+  nav li {
+    width: 50%;
+    border: 1px solid white;
+    text-align: center;
+  }
+  nav a {
+    padding: 12px 0;
+  }
+}
+.banner {
+  height: 780px;
+  background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/home-header.png?raw=true);
+  background-size: cover;
+  background-position: center;
+  color: #650300;
+}
+.banner .container {
+  margin-left: auto;
+}
+.banner p {
+  width: 502px;
+  margin-left: auto;
+  font-family: "Noto Sans TC";
+  padding-top: 296px;
+  font-size: 36px;
+}
+.banner h1 {
+  width: 576px;
+  margin-left: auto;
+  font-family: "Noto Sans TC";
+  font-weight: bold;
+}
+.banner button {
+  margin-left: auto;
+  font-family: "Noto Sans TC", sans-serif;
+  background-color: #aa0601;
+  color: #ffffff;
+  width: 104px;
+  padding: 6px 12px;
+  border: none;
+}
+.banner .ta-r {
+  text-align: right;
+}
+
+@media (max-width: 992px) {
+  .banner {
+    background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/home-header-sm.png?raw=true);
+  }
+  .banner .container {
+    padding-right: 36px;
+  }
+}
+@media (max-width: 767px) {
+  .banner {
+    text-align: right;
+  }
+  .banner p {
+    width: 347px;
+    font-size: 16px;
+  }
+  .banner h1 {
+    width: 347px;
+    font-size: 24px;
+  }
+}
+.feature {
+  padding: 80px 0;
+}
+.feature ul {
+  flex-wrap: wrap;
+  gap: 24px;
+}
+.feature li {
+  width: calc((100% - 72px) / 4);
+}
+.feature li h3 {
+  color: #aa0601;
+}
+.feature li img {
+  margin: 0 auto;
+}
+
+@media (max-width: 992px) {
+  .feature ul {
+    margin-top: 32px;
+    padding: 0 36px;
+  }
+  .feature li {
+    width: calc((100% - 24px) / 2);
+  }
+}
+@media (max-width: 767px) {
+  .feature {
+    padding: 40px 0;
+  }
+  .feature ul {
+    margin-top: 32px;
+    padding: 0 14px;
+  }
+  .feature li {
+    padding: 0;
+    width: 100%;
+  }
+}
+.design-feat {
+  background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/index-bg.png?raw=true);
+  height: 608px;
+  background-size: cover;
+  background-position: center;
+  padding: 80px 0;
+}
+.design-feat h3 {
+  color: #ffffff;
+}
+.design-feat p {
+  background-color: #ffffff;
+  text-align: center;
+  color: #aa0601;
+  font-family: "roboto";
+  font-weight: bold;
+}
+
+@media (max-width: 992px) {
+  .design-feat {
+    background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/index-bg-md.png?raw=true);
+    height: 960px;
+  }
+  .design-feat .container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .design-feat .container div {
+    margin-bottom: 24px;
+  }
+  .design-feat img {
+    width: 696px;
+  }
+}
+@media (max-width: 767px) {
+  .design-feat {
+    background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/index-bg-sm.png?raw=true);
+    height: 820px;
+    padding-top: 40px;
+  }
+  .design-feat .container {
+    margin-top: 24px;
+  }
+  .design-feat .photo-1 {
+    content: url(https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/home-section4-1-sm.png?raw=true);
+    width: 348px;
+  }
+  .design-feat .photo-2 {
+    content: url(https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/home-section4-2-sm.png?raw=true);
+    width: 348px;
+  }
+}
+.classic-glasses {
+  background-color: #ffffff;
+  padding: 80px 0;
+}
+.classic-glasses ul {
+  flex-wrap: wrap;
+  gap: 24px;
+}
+.classic-glasses li {
+  width: calc((100% - 72px) / 3);
+}
+.classic-glasses li p {
+  color: #aa0601;
+  text-align: center;
+  font-size: 48px;
+  margin-top: 8px;
+  font-family: "black italic";
+  font-weight: bold;
+}
+@media (min-width: 993px) and (max-width: 1060px) {
+  .classic-glasses li p {
+    font-size: 44px;
+  }
+}
+
+@media (max-width: 992px) {
+  .classic-glasses ul {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 48px;
+  }
+  .classic-glasses li {
+    width: 100%;
+  }
+  .classic-glasses li img {
+    width: 346px;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 767px) {
+  .classic-glasses {
+    padding: 40px 0;
+  }
+  .classic-glasses ul {
+    margin-top: 24px;
+  }
+}
+.cards {
+  background-color: #ffffff;
+  padding: 80px 0;
+}
+.cards ul {
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.cards li {
+  width: calc((100% - 72px) / 4);
+}
+.cards .feedback {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 207px;
+  border: #dee2e6 1px solid;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1607843137);
+}
+
+@media (max-width: 992px) {
+  .cards ul {
+    padding: 0 36px;
+  }
+  .cards li {
+    width: calc((100% - 24px) / 2);
+  }
+}
+@media (max-width: 767px) {
+  .cards {
+    padding: 40px 0;
+  }
+  .cards h3 {
+    margin-bottom: 24px;
+  }
+  .cards ul {
+    padding: 0 14px;
+  }
+  .cards li {
+    width: 348px;
+  }
+}
+.contact {
+  padding: 80px 0;
+}
+.contact p {
+  margin: 0 auto;
+  max-width: 636px;
+  margin-bottom: 24px;
+}
+.contact form {
+  width: 636px;
+  margin: 0 auto;
+}
+.contact label {
+  display: block;
+}
+.contact input {
+  width: 100%;
+  padding: 6px 12px;
+  border: 1px solid #000000;
+}
+.contact textarea {
+  resize: none;
+  height: 136px;
+  width: 100%;
+}
+.contact .form-checkbox {
+  margin-right: 10px;
+  width: 20px;
+  height: 20px;
+  background: #000000;
+  accent-color: #650300;
+}
+.contact .btn {
+  width: 416px;
+  height: 56px;
+  padding: 16px 0;
+  margin: 0 auto;
+  background-color: #aa0601;
+  color: #ffffff;
+  border: none;
+  font-weight: bold;
+}
+.contact .btn:hover {
+  background-color: #650300;
+}
+
+@media (max-width: 767px) {
+  .contact .container {
+    max-width: 348px;
+  }
+  .contact p {
+    max-width: 348px;
+    font-size: 16px;
+  }
+  .contact input {
+    max-width: 348px;
+  }
+  .contact form,
+  .contact .btn {
+    width: 348px;
+  }
+  .contact label {
+    max-width: 348px;
+  }
+}
+.footer {
+  background-color: #aa0601;
+  color: #ffffff;
+  padding: 48px 0 32px 0;
+}
+.footer .web-map {
+  gap: 48px;
+}
+.footer .social-media {
+  gap: 32px;
+}
+.footer .social-media img {
+  width: 48px;
+  height: 48px;
+}
+.footer span {
+  font-size: 36px;
+  margin-right: 22px;
+  transform: translate(0px, 6px);
+}
+.footer a {
+  color: #ffffff;
+  font-family: "Noto Sans TC";
+  font-size: 36px;
+}
+.footer P {
+  font-family: "roboto";
+}
+.footer hr {
+  margin: 32px 0;
+}
+.footer .ul-3 {
+  gap: 48px;
+}
+
+@media (max-width: 992px) {
+  .footer {
+    padding: 48px 36px 40px 36px;
+  }
+}
+@media (max-width: 767px) {
+  .footer {
+    padding: 24px;
+  }
+  .footer .web-map {
+    display: none;
+  }
+  .footer .social-media {
+    transform: translateY(12px);
+  }
+  .footer .social-media img {
+    width: 24px;
+    height: 24px;
+  }
+  .footer .ul-1 {
+    justify-content: end;
+    height: 0;
+    margin-bottom: 0;
+  }
+  .footer .contact-method a,
+  .footer .contact-method span {
+    font-size: 16px;
+  }
+  .footer hr {
+    margin: 24px 0 16px 0;
+  }
+  .footer .copyright {
+    flex-direction: column;
+    justify-content: start;
+  }
+  .footer .copyright p {
+    padding: 8px 0;
+  }
+  .footer .ul-3 {
+    flex-direction: column;
+    justify-content: start;
+    gap: 8px;
+  }
+}
+.animates li {
+  position: relative;
+}
+.animates li::after {
+  content: "";
+  background: #650300;
+  width: 0%;
+  height: 3px;
+  left: 0;
+  bottom: -10px;
+  position: absolute;
+  transition: 0.5s;
+}
+.animates li:hover:after {
+  width: 100%;
+}/*# sourceMappingURL=index.css.map */
