@@ -378,6 +378,7 @@ nav a {
   font-size: 48px;
   margin-top: 8px;
   font-family: "black italic";
+  font-style: italic;
   font-weight: bold;
 }
 @media (min-width: 993px) and (max-width: 1060px) {
@@ -523,6 +524,9 @@ nav a {
 }
 .footer .web-map {
   gap: 48px;
+}
+.footer .web-map a {
+  font-size: 16px;
 }
 .footer .social-media {
   gap: 32px;

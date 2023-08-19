@@ -340,6 +340,7 @@ nav {
             font-size: 48px;
             margin-top: 8px;
             font-family: "black italic";
+            font-style: italic;
             font-weight: bold;
             @media (min-width: 993px) and (max-width: 1060px) {
                 font-size: 44px;
@@ -373,6 +374,7 @@ nav {
 }
 
 // cards
+
 .cards {
     background-color: $color_white;
     padding: 80px 0;
@@ -495,6 +497,9 @@ nav {
     padding: 48px 0 32px 0;
     .web-map {
         gap: 48px;
+        a {
+            font-size: 16px;
+        }
     }
     .social-media {
         gap: 32px;
